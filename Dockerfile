@@ -6,7 +6,6 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 from openjdk:8-jdk-alpine
 VOLUME /tmp
 ARG JAR_FILE=target/application.jar
-COPY ${JAR_FILE} app.jar
 COPY --from=build /usr/src/app/${JAR_FILE} app.jar
 
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
