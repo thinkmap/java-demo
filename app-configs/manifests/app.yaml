@@ -14,5 +14,5 @@ spec:
         run: spring-boot-sample
     spec:
       containers:
-      - image: ${IMAGE}
+      - image: nginx
         name: nginx
