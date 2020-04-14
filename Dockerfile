@@ -1,9 +1,9 @@
-FROM maven:3-jdk-8 AS build  
+FROM registry.cn-beijing.aliyuncs.com/hub-mirrors/maven:3-jdk-8 AS build  
 COPY src /usr/src/app/src  
 COPY pom.xml /usr/src/app  
-RUN mvn -f /usr/src/app/pom.xml clean package
+RUN mvn -f /usr/src/app/pom.xml clean package -DskipTests
 
-from openjdk:8-jdk-alpine
+from registry.cn-beijing.aliyuncs.com/hub-mirrors/openjdk:8-jdk-alpine
 VOLUME /tmp
 ARG JAR_FILE=target/application.jar
 COPY --from=build /usr/src/app/${JAR_FILE} app.jar
