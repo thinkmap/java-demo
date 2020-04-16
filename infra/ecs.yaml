@@ -113,6 +113,35 @@
         }
       }
     },
+    "EcsInstance": {
+      "Type": "ALIYUN::ECS::Instance",
+      "Properties": {
+        "IoOptimized": "optimized",
+        "PrivateIpAddress": "192.168.0.2",
+        "VpcId": {
+          "Ref": "EcsVpc"
+        },
+        "SecurityGroupId": {
+          "Ref": "EcsSecurityGroup"
+        },
+        "VSwitchId": {
+          "Ref": "EcsVSwitch"
+        },
+        "ImageId": {
+          "Ref": "InstanceImageId"
+        },
+        "AllocatePublicIP": {
+          "Ref": "InstancePublicIP"
+        },
+        "InstanceType": {
+          "Ref": "InstanceType"
+        },
+        "SystemDiskCategory": "cloud_ssd",
+        "Password": {
+          "Ref": "InstancePassword"
+        }
+      }
+    },
     "EcsVpc": {
       "Type": "ALIYUN::ECS::VPC",
       "Properties": {
