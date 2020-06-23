@@ -9,6 +9,7 @@ spec:
     matchLabels:
       run: spring-boot-sample
   template:
+    replicas: 4
     metadata:
       labels:
         run: spring-boot-sample
