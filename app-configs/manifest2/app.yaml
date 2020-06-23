@@ -5,11 +5,11 @@ metadata:
     run: spring-boot-sample
   name: spring-boot-sample
 spec:
+  replicas: 4
   selector:
     matchLabels:
       run: spring-boot-sample
   template:
-    replicas: 4
     metadata:
       labels:
         run: spring-boot-sample
