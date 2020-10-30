@@ -9,7 +9,9 @@ public class HelloController {
 
     @RequestMapping("/msg")
     public ExampleData msg() {
-        return ExampleData.builder().msg("hello").build();
+        ExampleData hello = ExampleData.builder().msg("hello").build();
+        System.out.println(hello.getMsg());
+        return hello;
     }
 
     @RequestMapping("/")
