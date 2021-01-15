@@ -4,7 +4,7 @@ metadata:
   name: spring-boot-route
 spec:
   rules:
-    - host: www.${HOST}
+    - host: www.example
       http:
         paths:
           - backend:
