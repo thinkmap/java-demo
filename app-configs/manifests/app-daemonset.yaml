@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  labels:
+    app: app-daemonset
+  name: app-daemonset
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: app-daemonset
+  template:
+    metadata:
+      labels:
+        app: app-daemonset
+    spec:
+      containers:
+        - image: 'tomcat:latest'
+          imagePullPolicy: Always
+          name: app-daemonset
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+      dnsPolicy: ClusterFirst
