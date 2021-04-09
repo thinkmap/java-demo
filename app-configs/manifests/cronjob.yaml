@@ -1,7 +1,7 @@
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: test
+  name: test-cronjob
 spec:
   concurrencyPolicy: Allow
   failedJobsHistoryLimit: 1

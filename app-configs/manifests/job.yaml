@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  labels:
+    task:  hello
+  name: test-job
+spec:
+  activeDeadlineSeconds: 600
+  backoffLimit: 6
+  completions: 1
+  parallelism: 1
+  selector:
+    matchLabels:
+      task:  hello
+  template:
+    metadata:
+      labels:
+        task:  hello
+    spec:
+      containers:
+        - image: 'busybox:latest'
+          imagePullPolicy: Always
+          name: test
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
