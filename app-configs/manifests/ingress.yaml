@@ -11,4 +11,3 @@ spec:
               serviceName: spring-boot-sample
               servicePort: 80
             path: /
-            pathType: ImplementationSpecific
