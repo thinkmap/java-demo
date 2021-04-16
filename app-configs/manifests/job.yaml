@@ -17,6 +17,7 @@ spec:
       labels:
         task:  hello
     spec:
+      restartPolicy: Never
       containers:
         - image: 'busybox:latest'
           imagePullPolicy: Always
