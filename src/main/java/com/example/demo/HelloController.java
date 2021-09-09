@@ -21,6 +21,6 @@ public class HelloController {
     
     @RequestMapping("/gossip")
     public String saySomething() {
-        return "This is Ingress Demo!"
+        return "This is Ingress Demo!";
     }
 }
