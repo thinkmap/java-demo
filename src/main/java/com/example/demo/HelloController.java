@@ -16,11 +16,11 @@ public class HelloController {
 
     @RequestMapping("/")
     public String index() {
-        return "Greetings from Ingress Demo V4!";
+        return "Greetings from Ingress Demo V5!";
     }
     
     @RequestMapping("/gossip")
     public String saySomething() {
-        return "This is Ingress Demo!";
+        return "This is Ingress Demo! V2";
     }
 }
