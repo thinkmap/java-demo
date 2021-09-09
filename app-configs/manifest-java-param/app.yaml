@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: spring-boot-sample
+  name: spring-boot-sample
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: spring-boot-sample
+  template:
+    metadata:
+      labels:
+        run: spring-boot-sample
+    spec:
+      containers:
+      - image: ${IMAGE}
+        name: app
+        command: ["sh", "-c", "java -Djava.security.egd=file:/dev/./urandom -jar /app.jar"]
