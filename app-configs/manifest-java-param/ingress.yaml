@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: simple-java-server-route
+spec:
+  rules:
+    - host: simple-server.ca0f5566f6b2944f992068e44743a73ed.cn-hangzhou.alicontainer.com
+      http:
+        paths:
+          - backend:
+              serviceName: simple-java-server-svc
+              servicePort: 80
+            path: /
+            pathType: Prefix
