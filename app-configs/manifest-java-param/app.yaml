@@ -4,7 +4,7 @@ metadata:
   labels:
     run: spring-boot-sample
   annotations:
-    k8s.aliyun.com/eci-instance-spec: 2.0-4.0Gi
+    k8s.aliyun.com/eci-instance-spec: 1.0-2.0Gi
   name: spring-boot-sample
 spec:
   replicas: 2
