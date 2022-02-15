@@ -9,7 +9,7 @@ spec:
         paths:
           - backend:
               service:
-                Name: spring-boot-service
+                name: spring-boot-service
                 port:
                   number: 8080
             path: /
